@@ -1,0 +1,67 @@
+<% if domain == "us.researchgate.net" -%>
+# Main
+deb http://master.us.researchgate.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%> main restricted universe multiverse
+# Security
+deb http://master.us.researchgate.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%>-security main restricted universe multiverse
+# Updates
+deb http://master.us.researchgate.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%>-updates main restricted universe multiverse
+<% end -%>
+<% if domain == "us.rggamma.net" -%>
+# Main
+deb http://in01.us.rggamma.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%> main restricted universe multiverse
+# Security
+deb http://in01.us.rggamma.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%>-security main restricted universe multiverse
+# Updates
+deb http://in01.us.rggamma.net:3142/ubuntu/ubuntu <%= lsbdistcodename -%>-updates main restricted universe multiverse
+<% end -%>
+<% if domain == "hk.researchgate.net" -%>
+# Main
+deb http://hk.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%> main restricted universe multiverse
+# Security
+deb http://hk.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%>-security main restricted universe multiverse
+# Updates
+deb http://hk.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%>-updates main restricted universe multiverse
+<% end -%>
+<% if (domain == "de.researchgate.net") || (domain == "rgoffice.net") -%>
+# Main
+deb http://de.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%> main restricted universe multiverse
+# Security
+deb http://de.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%>-security main restricted universe multiverse
+# Updates
+deb http://de.archive.ubuntu.com/ubuntu <%= lsbdistcodename -%>-updates main restricted universe multiverse
+<% end -%>
+
+# puppet
+deb http://apt.puppetlabs.com <%= lsbdistcodename -%> main
+deb-src http://apt.puppetlabs.com <%= lsbdistcodename -%> main
+
+# java
+deb http://archive.canonical.com/ubuntu <%= lsbdistcodename -%> partner
+
+# researchgate-custom
+deb http://master.us.researchgate.net/ubuntu <%= lsbdistcodename -%> main
+
+# postgres 9.0
+deb http://ppa.launchpad.net/pitti/postgresql/ubuntu <%= lsbdistcodename -%> main 
+deb-src http://ppa.launchpad.net/pitti/postgresql/ubuntu <%= lsbdistcodename -%> main 
+
+# cassandra
+deb http://www.apache.org/dist/cassandra/debian 10x main
+
+#cloudera
+deb http://archive.cloudera.com/debian <%= lsbdistcodename -%>-cdh3 contrib
+deb-src http://archive.cloudera.com/debian <%= lsbdistcodename -%>-cdh3 contrib
+
+# mogilefs
+deb http://ppa.launchpad.net/hgeerts/mogilefs/ubuntu maverick main 
+
+#mongodb
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+
+# nginx
+deb http://ppa.launchpad.net/nginx/stable/ubuntu <%= lsbdistcodename -%> main
+
+<% if (domain == "rgoffice.net") -%>
+# subversion
+deb http://opensource.wandisco.com/ubuntu <%= lsbdistcodename -%> svn17
+<% end %>
